@@ -1,0 +1,1048 @@
+/* Основные цвета сайта (оранжевые) #e04a00  #ff6800*/
+
+/* Подключаем шрифты Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html, h1, h2, h3, h4, h5, h6, a {
+	font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+html {
+	height: 100%;
+	text-decoration: none;
+	outline: none;
+}
+
+
+
+/* Цвет выделения на сайте */
+::selection {
+	background: rgba(255, 104, 0, 0.55);
+}
+
+
+
+/* Привязка подвалу к низу страницы */
+#wrapper {
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+
+}
+
+
+
+/* Настройки тела сайта */
+body {
+	height: 100%;
+	margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+}
+
+
+
+
+/* Прелоадер  */
+
+.spinner-border {
+	height: 4em;
+	width: 4em;
+	position: fixed;
+	top: 50%;
+	background: #e0e0e0;
+	border: 0.35em solid currentColor;
+	border-right-color: transparent;
+	font-size: 1.5em;
+	color: #e04a00;
+	z-index: 1001;
+}
+/* Блок прелоадера */
+.spinnerBlock {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #e0e0e0;
+  z-index: 1001;
+}
+/* Cкрытие блока прелоадера */
+.spinnerBlock {
+	display: none;
+}
+/* Cкрытие блока прелоадера плавно */
+.hideSpinner .spinnerBlock {
+	transition: 0.5s opacity;
+	opacity: 0;
+}
+
+
+
+
+/* Меню */
+
+.navbar {
+ background: #2d2d2d !important;
+}
+
+/* Кнопки меню */
+.nav-link {
+	padding: 0.4em;
+	margin-right: calc(1.5em + 4px) !important;
+  border: 2px solid #2d2d2d;
+  border-radius: 0.2em;
+	font-size: 1.1em;
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
+/* Кнопки меню при наведении*/
+.nav-link:hover {
+	border:2px solid #ff6800;
+	border-radius: 0.2em;
+	background: #e04a00;
+	color: #f97300;
+}
+
+ /* Кнопки входа и выхода из аккаунта */
+.nav-link.login {
+	padding: 0.5em;
+  background: #e04a00;
+  border:2px solid #ff6800;
+  border-radius: 0.2em;
+	box-shadow: none !important;
+	outline: none;
+}
+
+ /* Кнопки входа и выхода из аккаунта  при наведении */
+.nav-link.login:hover {
+  background: #ff6800;
+  border-color: #e04a00;
+}
+
+/* Кнопки входа и выхода из аккаунта  при нажатии */
+.nav-link.login:active {
+  background: #ff6800 !important;
+	box-shadow: 0 0 0 0.2rem #e04a0080 !important;
+	outline: none;
+}
+
+/* Выстраивать в столбик пунткты меню для устройств с небольшими экранами */
+.navbar-collapse {
+	justify-content: flex-end;
+}
+
+/* Цвет кнопки вызова меню на устройствах с небольшим экраном */
+.navbar-toggler {
+	background: #e04a00 !important;
+}
+
+/* Картинка профиля */
+#profile img {
+	height: 30px;
+	border-radius: 15px;
+}
+
+
+
+/* Окно авторизации */
+
+/* Поля ввода данных при нажатии и фокусировки */
+.modal-body input:active, input:focus {
+	border-color: #e04a00 !important;
+	box-shadow: 0 0 0 0.2rem #e04a0080 !important;
+	outline: none;
+}
+
+/* Кнопки скрытия окна и авторизации */
+.modal-footer button {
+	padding: 0.5em;
+	border:2px solid #55585a;
+  border-radius: 0.2em;
+	box-shadow: none !important;
+  color: #ffffff;
+}
+
+/* Кнопка авторизации */
+#login_btn {
+	border:2px solid #ff6800;
+  border-radius: 0.2em;
+  background: #e04a00;
+  padding: 0.5em;
+  color: #ffffff;
+}
+
+/* Кнопка авторизации при наведении */
+#login_btn:hover {
+	background: #ff6800;
+	border-color: #e04a00;
+}
+
+/* Кнопка авторизации при нажатии */
+#login_btn:active {
+  background:#ff6800 !important;
+	box-shadow: 0 0 0 0.2rem #e04a0080 !important;
+}
+
+/* Ссылка на восстановление пароля */
+.modal-body a {
+	color: #e04a00;
+	outline: none;
+	text-decoration: none;
+}
+
+/* Ссылка на восстановление пароля при наведении */
+.modal-body a:hover {
+	color: #ff6800;
+}
+
+
+/* Шапка сайта */
+
+.header {
+	height: 100vh;
+	background-image: url('../img/header.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+
+}
+
+/* Затемнение шапки */
+.overlay {
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.55);
+}
+
+/* Описание сайта в шапке сайта */
+.description {
+	margin: auto;
+	padding: 2em;
+	position: absolute;
+  top: 30%;
+  justify-content: center;
+}
+
+/* Заголовок описания сайта в шапке сайта */
+.description h1 {
+	font-size: 3em;
+	color: #e04a00;
+	/* #e04a00 */
+	font-weight: bold;
+}
+
+/* Текст описания сайта в шапке сайта */
+.description p {
+	color: #f3f3f3;
+	font-size: 0.4em;
+	width: 50%;
+	line-height: 1.5;
+	margin: 1.5em 0;
+	font-weight: normal;
+}
+
+/* Кнопка начать */
+.description a {
+	padding: 0.5em;
+	border: 2px solid #ff6800;
+	border-radius: 0.2em;
+	background: #e04a00;
+	box-shadow: none !important;
+	font-size: 0.5em;
+	color: #ffffff;
+
+}
+
+/* Кнопка начать при наведении */
+.description a:hover {
+  background: #ff6800;
+  border-color: #e04a00 !important;
+}
+
+/* Кнопка начать при нажатии */
+.description a:active {
+  background: #ff6800 !important;
+	box-shadow: 0 0 0 0.2rem #e04a0080 !important;
+}
+
+
+
+/* О сайте */
+
+.about {
+	margin: 4em 0;
+	padding: 1em;
+	position: relative;
+}
+
+/* Заголовок о сайте */
+.about h1 {
+	margin: 2em;
+	color: #ff6800;
+}
+
+/* Блок картинки о сайте */
+#aboutImg {
+	display: flex;
+  align-items: center;
+  justify-content: center
+}
+/* Картинка о сайте */
+.about img {
+	height: auto;
+	width: 100%;
+}
+
+/* Разделительная линия о сайте */
+.about .desc {
+	padding: 2em;
+	border-left: 3px solid #2d2d2d;
+}
+
+/* Заголовок текста о сайте */
+.about .desc h3 {
+	color: #ff6800;
+}
+
+/* Текст о сайте */
+.about .desc p {
+	line-height: 2;
+	color: #2d2d2d;
+}
+
+
+
+/* Упражнения */
+
+.exercises {
+	margin: 4em 0;
+	position: relative;
+}
+
+/* Заголовок упражнений */
+.exercises h1 {
+	margin: 2em;
+	color: #ff6800;
+}
+
+/* Карточка упражнения */
+.exercises .card {
+	height: auto;
+	margin-bottom: 2em;
+	box-shadow: 0 0 20px #cccccc;
+}
+
+/* Картинка карточки упражнения */
+.exercises .card img {
+	width: 100%;
+	height: auto;
+}
+
+/* Заголовок карточки упражнения */
+.exercises .card-title {
+	color: #F97300;
+}
+
+/* Тело карточки упражнения */
+.exercises .card-body {
+	padding: 1em;
+}
+
+/* Ссылка на упражнение */
+.exercises .card-footer a {
+	color: #e04a00;
+}
+
+/* Ссылка на упражнение при наведении*/
+.exercises .card-footer a:hover {
+	color: #ff6800;
+}
+
+
+
+/* Регистрация */
+
+/* Форма регистрации */
+.contact-form {
+	margin: 6em 0;
+	position: relative;
+}
+
+/* Заголовок формы регистрации */
+.contact-form h1 {
+	padding:2em 1px;
+	color: #ff6800;
+}
+
+/* Названия полей ввода данных */
+.form-group label {
+	font-size: 1.1em;
+}
+
+/* Поля ввода данных при нажатии и фокусировки */
+.contact-form input:active, input:focus {
+	border-color: #e04a00;
+	box-shadow: 0 0 0 0.2rem rgba(224, 74, 0, 0.5);
+	outline: none;
+}
+
+/* Чекбокс соглашения с условиями регистрации и испотзования сайта */
+.custom-control-input:checked~.custom-control-label::before {
+	border-color: #e04a00;
+	background-color: #e04a00;
+	outline: none;
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+	box-shadow: 0 0 0 0.2rem rgba(224, 74, 0, 0.50);
+}
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+	border-color: #e04a00;
+}
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+	background-color: rgba(224, 74, 0, 0.8) ;
+	border-color: #e04a00;
+}
+.custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
+	background-color: rgba(224, 74, 0, 0.8);
+}
+
+/* Кнопка регистрации */
+.contact-form button {
+	margin-top: 1em;
+	padding: 0.75em;
+	background-color: #e04a00;
+	box-shadow: none;
+	border: 2px solid #ff6800;
+  border-radius: 0.2em;
+	font-size: 1.1em;
+  color: #ffffff;
+	outline: none;
+}
+
+/* Кнопка регистрации при наведении */
+.contact-form button:hover {
+	background-color: #ff6800;
+	border-color: #e04a00;
+}
+
+/* Кнопка регистрации при нажатии и фокусировки */
+.contact-form button:active, .contact-form button:focus {
+  background: #ff6800 !important;
+	box-shadow: 0 0 0 0.2rem #e04a0080 !important;
+	border-color: #e04a00 !important;
+	outline: none;
+}
+
+
+
+/* Подвал сайта */
+
+#footer {
+	height: auto;
+	min-height: 120px;
+	padding: 1.5em;
+	background: #2d2d2d;
+	color: #ffffff;
+}
+
+
+/* cookie информер */
+
+/* Уведомление об использование cookie */
+#cookieBlock {
+	padding: 1em 5em;
+	padding-bottom: 2em;
+	height: auto;
+	width: 100%;
+	position: fixed;
+	bottom: 0%;
+	background-color: rgba(45, 45, 45, 0.7);
+	font-size: 0.9em;
+	color: #ffffff;
+  text-align: center;
+}
+
+/* Текст уведомления об использование cookie */
+#cookieBlock p {
+	margin-bottom: 1.5em;
+}
+
+/* Кнопка уведомление об использование cookie */
+#cookieAcceptButton {
+	padding: 0.8em;
+	background: rgba(224, 74, 0, 0.7);
+	color: #ffffff;
+	outline: none;
+	text-decoration: none;
+
+}
+/* Кнопка уведомление об использование cookie при наведении */
+#cookieAcceptButton:hover {
+	background-color: rgba(255, 104, 0, 0.7);
+}
+
+
+
+/* Универсальные */
+
+/* Стандартная ссылка */
+.defaultLink {
+	color: #e04a00;
+}
+/* Стандартная ссылка при наведении*/
+.defaultLink:hover {
+	color: #ff6800;
+	text-decoration: none;
+	outline: none;
+}
+
+/* Стандартный блок с текстом */
+.defaultTextBlock {
+	margin: 0 2.5em;
+}
+
+/* Стандартный заголовок */
+.sectionHeader {
+	margin: 2em;
+	color: #ff6800;
+}
+
+/* Стандартный блок */
+.defaultBlock {
+	margin: 4em 0;
+	position: relative;
+}
+
+.defaultButton {
+	border:2px solid #ff6800;
+  border-radius: 0.2em;
+  background: #e04a00;
+  padding: 0 0.5em;
+  color: #ffffff;
+	outline: none !important;
+	text-decoration: none !important;
+}
+
+/* Кнопка авторизации при наведении */
+.defaultButton:hover {
+	background: #ff6800;
+	border-color: #e04a00;
+	color: #ffffff;
+}
+
+/* Кнопка авторизации при нажатии */
+.defaultButton:active {
+  background:#ff6800 !important;
+	box-shadow: 0 0 0 0.2rem #e04a0080 !important;
+}
+
+
+
+
+/* Общее для всех упражнений */
+
+/* Картинка счётчик просмотров для упражнения */
+#views img {
+	max-width: 2em;
+	margin-right: 0.25em;
+}
+
+/* Счётчик просмотров */
+#views {
+	background-color: #ff6800;
+}
+
+/* Счётчик просмотров, id тектса (ускоритель чтения), уведомления об ошибках в упражнении*/
+#views, #text_id {
+	margin-right: 2em;
+	margin-bottom: 2em;
+	padding: 0.25em;
+	width: 7em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/* Информациооный бар в упражнении */
+#info_bar {
+	display: flex;
+	flex-direction: row;
+}
+
+/* Блок описания упражнения */
+.accordion {
+	margin: 0 auto;
+	min-width: 100%;
+	width: auto !important;
+	width: 100%;
+}
+
+#e_area {
+	width: 100%;
+}
+
+
+
+
+/* Профиль пользователя */
+
+/* Блок картинки профиля */
+.profileAvatar {
+	display: flex;
+	padding: 2em;
+	padding-bottom: 1em;
+	justify-content: center;
+	align-items: center;
+}
+/* Картинки профиля */
+.profileAvatar img {
+	height: 12em;
+	width: 12em;
+	border-radius: 6em
+}
+/* Информационный блок профиля пользователя */
+.profileInfoBlock {
+	margin-bottom: 3rem;
+	font-size: 1.1em;
+}
+/* Блок для прогресс бара */
+.profileInfoBlock .progress {
+	margin: 2rem 0;
+	height: 2rem
+}
+/* Информационный блок профиля пользователя  */
+.profileInfoBlock .progress .progress-bar {
+	background-color: #ff6800;
+}
+/* Блок отображения опыта для прогресс бара */
+.profileUserExperienceProgress {
+	position: absolute;
+  width: calc(100% - 2.5rem - 30px);
+	height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #212529;
+	font-size: 1.4em;
+	font-weight: 500;
+
+}
+/* Блок обо мне в профиле */
+.profileUserAboutMe {
+	padding: 0 1rem;
+	margin-bottom: 3rem;
+	font-size: 1.1em;
+}
+/* Картинки профиля из блока настройки картинки профиля */
+.settingsUserAvatar {
+	height: 5rem;
+	margin: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Блок выбора картинок профиля */
+#settingsUserAvatarChooseBlock {
+	display: flex;
+	padding: 0.5rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+/* Кнопка подтверждения настроек в профиле пользователя */
+.profileSetButton {
+	padding: 0.5rem;
+}
+/* Поля ввода данных при нажатии и фокусировки */
+#accordionProfileSettings input:active, input:focus, textarea:active, textarea:focus {
+	border-color: #e04a00 !important;
+	box-shadow: 0 0 0 0.2rem #e04a0080 !important;
+	outline: none;
+}
+
+
+
+
+
+
+/* Медиа запросы для устройств с небольшим экраном */
+
+/* Горизонтальная оптимизация */
+/* Для устройств с разрешением экрана до 1201px, но неменее 768px  */
+@media (max-width: 1201px) and (min-width: 768px) {
+
+	/* Заголовок описания сайта в шапке сайта */
+	.description h1 {
+		font-size: 2em;
+	}
+
+	/* Текст описания сайта в шапке сайта */
+	.description p {
+		font-size: 0.5em;
+	}
+
+	/* Заголовок карточки упражнения */
+	.exercises .card-title {
+		font-size: 1.5em;
+	}
+
+	/* Текст карточки упражнения */
+	.exercises .card-body {
+		font-size: 0.8em;
+		height: 15em !important;
+	}
+}
+
+
+/* Для устройств с разрешением экрана до 991px, но неменее 768px */
+@media (max-width: 991px) and (min-width: 768px) {
+	/* Текст карточки упражнения */
+	.exercises .card-body {
+		height: 20em !important;
+		font-size: 0.8em;
+	}
+}
+
+
+/* Для устройств с разрешением экрана до 768px, но неменее 501px */
+@media (max-width: 767px) and (min-width: 501px) {
+	/* Заголовок описания сайта в шапке сайта */
+	.description h1 {
+		font-size: 1.8em;
+	}
+	/* Текст описания сайта в шапке сайта */
+	.description p {
+		width: 65%;
+		font-size: 0.6em;
+	}
+	/* Картинка о сайте */
+	.about img {
+    width: 50% !important;
+    margin-bottom: 2em;
+	}
+	/* Текст карточки упражнения */
+	.exercises .card-body {
+		font-size: 1.1em !important;
+	}
+	/* Ссылка на упражнение */
+	.exercises .card-footer a {
+		font-size: 1.3em;
+	}
+}
+
+
+/* Для мобильных устройств с разрешением экрана менее 501px по ширине */
+@media (max-width: 501px) {
+	/* Логотип сайта */
+	#siteLogo, #siteLogo img {
+		height: auto;
+		width: 70%;
+	}
+	/* Заголовок описания сайта в шапке сайта */
+	.description h1 {
+		font-size: 1.5em;
+	}
+	/* Текст описания сайта в шапке сайта */
+	.description p {
+		width: 85%;
+		font-size: 0.6em;
+	}
+	/* Заголовок о сайте */
+	.about h1, .exercises h1, .contact-form h1 {
+		font-size: 2em !important;
+	}
+	/* Картинка о сайте */
+	.about img {
+		width: 50% !important;
+    margin-bottom: 2em;
+	}
+	/* Уведомление об использование cookie */
+	#cookieBlock {
+    font-size: 0.7em !important;
+    padding: 1em 1em !important;
+		padding-bottom: 1.5em !important;
+	}
+	/* Стандартный заголовок */
+	.sectionHeader {
+		margin: 2em 0;
+		font-size: 1.5em;
+	}
+	/* Стандартный блок с текстом */
+	.defaultTextBlock {
+		font-size: 0.9em;
+	}
+	/* Стандартный блок с текстом */
+	.defaultTextBlock h1, h2,h3,h4 {
+		font-size: 1.4em;
+	}
+	/* Название колонок топа */
+	#topDescriptionLine {
+		font-size: 0.9em;
+		font-weight: inherit !important;
+	}
+	/* Содержание таблицы топа */
+	.topNum, .topLogin, .topRank, .topLevel, .topSpeed {
+		font-size: 0.9em !important;
+	}
+	/* Значки медалек топ 3 */
+	.topIcon {
+		height: 1.2rem !important;
+		width: 1.2rem !important;
+	}
+	/* Зоголовок на странице топа */
+	#hTop {
+		font-size: 1.6em !important;
+	}
+}
+
+
+/* Вертикальная оптимизация */
+/* Для мобильных устройств с разрешением экрана менее 501 по высоте и ширине */
+@media (max-height: 501px) and (max-width: 768px) {
+	#siteLogo, #siteLogo img {
+		/* Логотип сайта */
+		height: auto;
+		width: 60%;
+	}
+	/* Кнопки меню */
+	.nav-link {
+		margin: 0.25em 0;
+		padding: 0.5em;
+		font-size: 0.8em;
+	}
+	/* Шапка окна авторизации */
+	.modal-header {
+		padding: 0.25em 1em;
+	}
+	/* Заголовок окна авторизации */
+	.modal-title {
+		font-size: 1em;
+	}
+	/* Тело окна авторизации */
+	.modal-body {
+		padding: 0 1em;
+		color: #e04a00;
+	}
+	/* Подписи к полям ввода окна авторизации */
+	.modal-body label {
+		margin-bottom: 0.25em;
+		font-size: 1em;
+	}
+	/* Поля ввода окна авторизации */
+	.modal-body input {
+		height: 1.8em;
+	}
+	/* Ссылка на восстановление пароля */
+	.modal-body a {
+		font-size: 0.8em;
+	}
+	/* Блок ссылки на восстановление пароля */
+	.modal-body p {
+		margin-bottom: 0.25em;
+		padding: 0;
+	}
+	/* Подвал окна авторизации */
+	.modal-footer {
+		padding: 0.3em;
+	}
+	/* Кнопки скрытия окна и авторизации */
+	.modal-footer button {
+		padding: 0.2em;
+		font-size: 1em;
+	}
+	/* Кнопка авторизации */
+	#login_btn {
+		padding: 0.2em;
+		font-size: 1em;
+	}
+	/* Заголовок описания сайта в шапке сайта */
+	.description h1 {
+		font-size: 1.4em;
+	}
+	/* Текст описания сайта в шапке сайта */
+	.description p {
+		width: 85%;
+		font-size: 0.6em;
+	}
+	/* Заголовок о сайте */
+	.about h1, .exercises h1, .contact-form h1 {
+		font-size: 1.6em;
+	}
+	/* Картинка о сайте */
+	.about img {
+		width: 35% !important;
+	}
+	/* Картинка карточки упражнения */
+	.exercises .card img {
+		width: 100%;
+		height: auto;
+		max-height: 18em;
+	}
+	/* Уведомление об использование cookie */
+	#cookieBlock {
+		font-size: 0.65em !important;
+		padding: 1em 1em !important;
+		padding-bottom: 1.5em !important;
+	}
+	/* Стандартный заголовок */
+	.sectionHeader {
+		margin: 2em 0;
+		font-size: 1.5em;
+	}
+	/* Стандартный блок с текстом */
+	.defaultTextBlock {
+		font-size: 0.9em;
+	}
+	/* Стандартный блок с текстом */
+	.defaultTextBlock h1, h2,h3,h4 {
+		font-size: 1.4em;
+	}
+	/* Название колонок топа */
+	#topDescriptionLine {
+		font-size: 0.9em;
+		font-weight: inherit !important;
+	}
+	/* Содержание таблицы топа */
+	.topNum, .topLogin, .topRank, .topLevel, .topSpeed {
+		font-size: 0.9em !important;
+	}
+	/* Значки медалек топ 3 */
+	.topIcon {
+		height: 1.2rem !important;
+		width: 1.2rem !important;
+	}
+	/* Зоголовок на странице топа */
+	#hTop {
+		font-size: 1.6em !important;
+	}
+}
+
+
+
+
+/* Строка поиска */
+.search {
+	display: flex;
+	flex-direction: row;
+}
+
+.search input {
+	width: 100%;
+}
+
+/* Кнопкка пользователя */
+.search .defaultButton {
+  margin-left: 1rem;
+}
+
+/* Название колонок топа */
+#topDescriptionLine {
+	display:flex;
+	padding: 0.8rem 0;
+	background-color: #2d2d2d;
+	border-radius: 0.5rem 0.5rem 0 0;
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+/* Цвет название колонок топа */
+#topDescriptionLine div {
+	color: #ff6800;
+}
+
+/* Содержание таблицы топа */
+.topNum, .topLogin, .topRank, .topLevel, .topSpeed {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	overflow-wrap: anywhere;
+	font-size: 1.1em;
+	color: #ffffff;
+	text-align: center;
+}
+
+/* Разделительная линия между столбцами топа */
+.topNum, .topLogin, .topRank, .topLevel {
+	border-right: solid 0.1rem #2d2d2d;
+}
+
+/* Строки в таблице */
+.topLine {
+	display:flex;
+	padding: 0.5rem 0;
+	background-color: #656565;
+	border-bottom: solid #2d2d2d;
+	color: #ffffff;
+}
+
+/* Строки в таблице при наведении */
+.topLine:hover {
+	background-color: #e04a00;
+}
+
+/* Топ: номер в таблице  */
+.topNum {
+	width: 10%;
+}
+/* Топ: логин в таблице  */
+.topLogin {
+	width: 25%;
+}
+/* Топ: звание в таблице  */
+.topRank {
+	width: 25%;
+}
+/* Топ: уровень в таблице  */
+.topLevel {
+	width: 15%;
+}
+/* Топ: скорость в таблице  */
+.topSpeed {
+	width: 25%;
+	padding: 0.5rem ;
+}
+/* Строка заврешения таблицы топа */
+#lastTopLine {
+	height: 2em;
+	width: 100%;
+	background-color: #2d2d2d;
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+/* Значки медалек топ 3 */
+.topIcon {
+	height: 2rem;
+	width: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+/* Значок звания пользователя */
+.userBadge {
+	padding: 0.25em 0.5rem;
+	font-size: 0.8em;
+	color: #ffffff;
+}
+/* Топ: звание в таблице перенос текста */
+.topRank span {
+	white-space: inherit;
+}
+/* Значок звания админа */
+.adminBadge {
+	background-color: #8e2400;
+	color: #ffffff;
+}
+/* Топ: ссылка на пользователя из топа */
+.topLogin a {
+	color: #ffffff;
+	outline: none;
+	text-decoration: none;
+}

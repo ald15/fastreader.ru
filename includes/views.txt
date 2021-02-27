@@ -1,0 +1,14 @@
+
+  // Если пользователь ещё не смотрел это упражнение
+  if (($_SESSION['logged_user']['exercises_views'][$exerciseId] <= 1)) {
+    // Записываем в сессию, что пользователь посмотрел это упражнение
+    $_SESSION['logged_user']['exercises_views'][$exerciseId] += 1;
+  }
+
+  // Проверяем есть ли упражения уже просмотренные пользователем
+  for ($i=1; $i < $config['exercises']['exercisesAmount'] + 1; $i++) {
+    // Если в сессии есть записи об уже просмотренных упражениях, то вносим данные о просмотре в базу данных
+    if ($_SESSION['logged_user']['exercises_views'][$i] == 1) {
+      mysqli_query($connection, "UPDATE `exercises` SET `views` = `views` + 1 WHERE `id` = ".$i);
+    }
+  }
